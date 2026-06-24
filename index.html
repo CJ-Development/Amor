@@ -228,7 +228,7 @@ var db = firebase.firestore();
 
 var EMOJIS = ['💜','✈️','🍽️','🎬','🏕️','🌊','🎊','📸','💌','🌙','🌸','☕','🎶','🏡','⭐','👨‍❤️‍💋‍👨','😋','🎡','🐷','🎟️'];
 var CATS   = ['Viajes','Romance','Aventura','Hogar','Momentos','Sueños','Familia','Eventos'];
-var CAT_ICONS = {Viajes:'✈️',Romance:'💜',Aventura:'🏕️',Hogar:'🏡',Momentos:'📸',Sueños:'⭐',Familia:'👪', Eventos:'📅'};
+var CAT_ICONS = {Viajes:'✈️',Romance:'💜',Aventura:'🏕️',Hogar:'🏡',Momentos:'📸',Sueños:'⭐',Familia:'👪',Eventos:'📅'};
 
 var items = [], unsubscribe = null;
 var selEmoji = EMOJIS[0], selWho = '', selCat = CATS[5];
@@ -435,8 +435,7 @@ function render() {
   items.forEach(function(i){ if(i.done) done++; });
   var total = items.length;
   document.getElementById('progressFill').style.width = total ? (done/total*100)+'%' : '0%';
-  document.getElementById('progressCount').textContent = done+' de '+total;
-
+  document.getElementById('progressCount').textContent = total ? Math.round(done/total*100)+'%' : '0%';
   var filtered = items.slice();
   if (currentFilter !== 'Todas') filtered = filtered.filter(function(i){ return i.cat===currentFilter; });
   if (currentTab === 'pendientes') filtered = filtered.filter(function(i){ return !i.done; });
