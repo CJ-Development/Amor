@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="20%" r="85%">
+      <stop offset="0%" stop-color="#261942"/>
+      <stop offset="60%" stop-color="#130e20"/>
+      <stop offset="100%" stop-color="#0b0912"/>
+    </radialGradient>
+    <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8a8f5"/>
+      <stop offset="55%" stop-color="#9b72d4"/>
+      <stop offset="100%" stop-color="#e89bb8"/>
+    </linearGradient>
+    <linearGradient id="star" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4db"/>
+      <stop offset="100%" stop-color="#f2c98a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+  <circle cx="130" cy="135" r="4" fill="#dcd0f7" opacity="0.7"/>
+  <circle cx="388" cy="150" r="3" fill="#f2c98a" opacity="0.85"/>
+  <circle cx="115" cy="365" r="3" fill="#e89bb8" opacity="0.65"/>
+  <path d="M366 92l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" fill="url(#star)"/>
+  <path d="M256 382c-5 0-10-2-14-5-60-48-112-94-112-151 0-43 32-76 74-76 23 0 43 11 52 28 9-17 29-28 52-28 42 0 74 33 74 76 0 57-52 103-112 151-4 3-9 5-14 5z" fill="url(#heart)"/>
+</svg>
